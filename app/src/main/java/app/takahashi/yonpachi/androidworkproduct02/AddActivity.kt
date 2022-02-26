@@ -27,6 +27,7 @@ class AddActivity : AppCompatActivity() {
                 title = binding.titleEditText.text.toString(),
             )
 
+            // TextEditの内容をdbに保存
             db.collection("tasks")
                 .add(task)
                 .addOnSuccessListener { documentRefernce ->
@@ -35,6 +36,8 @@ class AddActivity : AppCompatActivity() {
                 .addOnFailureListener { e ->
                     Log.d(ADD_TAG, "Error adding document", e)
                 }
+
+            finish()
         }
     }
 

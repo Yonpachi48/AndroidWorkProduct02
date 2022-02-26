@@ -2,12 +2,12 @@ package app.takahashi.yonpachi.androidworkproduct02
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.ListAdapter
+import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import app.takahashi.yonpachi.androidworkproduct02.databinding.TaskListItemBinding
 
-class TaskAdapter : ListAdapter<Task, TaskViewHolder>(diffUtilCallback) {
+class TaskAdapter : ListAdapter<Task, TaskViewHolder>(diffUtilCallback){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TaskViewHolder {
         val view = TaskListItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return TaskViewHolder(view)
