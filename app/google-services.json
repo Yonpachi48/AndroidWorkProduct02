@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "422403724771",
+    "project_id": "androidworkproduct02",
+    "storage_bucket": "androidworkproduct02.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:422403724771:android:4ea32f32723f893c4a7cd6",
+        "android_client_info": {
+          "package_name": "app.takahashi.yonpachi.androidworkproduct02"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "422403724771-40c18gl1g16uq9ua90gslm307utko53g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdK-r2pyYjJeJrisIS-aF8bpgUOR_I5dA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "422403724771-40c18gl1g16uq9ua90gslm307utko53g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
