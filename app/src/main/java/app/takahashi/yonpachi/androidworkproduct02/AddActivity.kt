@@ -24,7 +24,8 @@ class AddActivity : AppCompatActivity() {
 
             // Taskクラスをインスタンス化
             val task = Task(
-                title = binding.titleEditText.text.toString(),
+                title = binding.titleEditText.editText?.text.toString(),
+                sentence = binding.sentenceEditText.editText?.text.toString()
             )
 
             // TextEditの内容をdbに保存
@@ -40,6 +41,8 @@ class AddActivity : AppCompatActivity() {
             finish()
         }
     }
+
+
 
     companion object {
         const val ADD_TAG = "taskTag"

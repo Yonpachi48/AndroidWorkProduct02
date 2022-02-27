@@ -7,5 +7,5 @@ data class Task(
     @DocumentId
     val id: String = "",
     val title: String = "",
-    val createdAt: Date = Date(System.currentTimeMillis()),
+    val sentence: String = "",
 )

@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import app.takahashi.yonpachi.androidworkproduct02.databinding.ActivityMainBinding
 import com.google.firebase.firestore.ktx.firestore
@@ -25,6 +26,18 @@ class MainActivity : AppCompatActivity() {
         val taskAdapter = TaskAdapter()
         binding.recyclerView.adapter = taskAdapter
         binding.recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+
+        // cellのクリックイベント
+        taskAdapter.setOnClickListener(
+            object: TaskAdapter.OnItemClickListener {
+                override fun onClick(view: View, task: Task) {
+                    val context = view.context
+                    val toDetailActivityIntent = Intent(context, DetailActivity::class.java)
+                    toDetailActivityIntent.putExtra("tasks", task.id)
+                    context.startActivity(toDetailActivityIntent)
+                }
+            }
+        )
 
         // アプリ起動時に、保存されているデータを取得する
         db.collection("tasks")
