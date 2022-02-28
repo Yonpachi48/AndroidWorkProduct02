@@ -43,6 +43,15 @@ class DetailActivity : AppCompatActivity() {
             startActivity(toChangeActivityIntent)
         }
 
+        binding.deleteButton.setOnClickListener {
+            db.collection("tasks").document(taskId.toString())
+                .delete()
+                .addOnSuccessListener { Log.d(TAG, "DocumentSnapshot successfully deleted!") }
+                .addOnFailureListener { e -> Log.w(TAG, "Error deleting document", e) }
+
+            finish()
+        }
+
     }
 
     companion object {
